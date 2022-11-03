@@ -8,7 +8,18 @@ const userValidation = data =>{
     })
     return userSchema.validate(data)
 }
+const emailValidation = data =>{
+
+    const schema = Joi.object().keys({
+        email:Joi.string().email().required(),
+        
+    });
+    const result = schema.validate(data)
+    return result
+}
+
+
 
 export {
-    userValidation
+    userValidation,emailValidation
 } 

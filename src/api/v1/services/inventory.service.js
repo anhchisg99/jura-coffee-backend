@@ -16,6 +16,13 @@ export async function getInventory(id) {
     console.log(error);
   }
 }
+export async function getInventoryPerProduct(productId) {
+  try {
+    return await Inventory.findOne({productId}).select('quantity') 
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 export async function getInventories() {
     try {

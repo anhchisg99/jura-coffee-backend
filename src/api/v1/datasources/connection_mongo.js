@@ -1,6 +1,5 @@
  
 import mongoose from "mongoose";
-// import  vars  from "/../configs/database.configs.js";
 import vars from '../../../configs/database.config.js'
 // INFO: connect to mongodb server using mongoose
 async function InitiateMongoServer() {

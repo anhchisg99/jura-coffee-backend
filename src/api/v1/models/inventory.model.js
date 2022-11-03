@@ -7,7 +7,7 @@ const ObjectId = mongoose.Types.ObjectId;
 const inventorySchema = new Schema({
     productId:{
         type:ObjectId,
-        ref:'Item'
+        ref:'Product'
     },
     quantity:Number,
     reservations:Array,

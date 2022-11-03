@@ -7,6 +7,7 @@ inventoryRoute.get('/',inventoryController.getInventories)
 inventoryRoute.get('/:id',inventoryController.getInventory)
 inventoryRoute.delete('/:id',inventoryController.delInventory)
 inventoryRoute.post('/',inventoryController.postInventory)
+inventoryRoute.get('/per-product/:id',inventoryController.getInventoryPerProduct)
 // inventoryRoute.post('/',inventoryController.postProduct)
 
 

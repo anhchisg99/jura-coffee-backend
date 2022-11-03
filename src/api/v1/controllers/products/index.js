@@ -2,6 +2,7 @@ import createProduct from "./createProduct.controller.js";
 import updateProduct from "./updateProduct.controller.js";
 import deleteProduct from "./deleteProduct.controller.js";
 import getProduct from "./getProduct.controller.js";
+import getPerProduct from "./getPerProduct.controller.js";
 import getHomeStore from "./getHomeStore.controller.js";
 import getNewRealse from "./getNewRealse.controller.js";
 import getPanigation from "./getPanigation.controller.js";
@@ -16,6 +17,7 @@ export {
     getHomeStore,
     getNewRealse,
     getProduct,
+    getPerProduct,
     getPanigation,
     getCategory,
     getRelateProduct,

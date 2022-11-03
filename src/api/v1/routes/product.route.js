@@ -9,7 +9,8 @@ import {upload_img} from '../utils/index.js'
 
 productRoute.get('/relate-product',productController.getRelateProduct)
 productRoute.get('/category-product',productController.getCategoryProduct)
-productRoute.get('/:id',productController.getProduct)
+// productRoute.get('/:id',productController.getProduct)
+productRoute.get('/:id',productController.getPerProduct)
 // productRoute.post('/',verifyAccessToken,authUser,authPage(['admin']),productController.createProduct)
 //test
 productRoute.post('/',upload_img.single("avatar"),productController.createProduct)

@@ -2,14 +2,14 @@
 // dotenv.config()
 import  Redis  from "ioredis";
 // test
-const redis = new Redis()
+// const redis = new Redis()
 
 // production
-// const redis = new Redis({
-//     host: 'redis-18317.c292.ap-southeast-1-1.ec2.cloud.redislabs.com',
-//     port: '18317',
-//     password: process.env.REDIS_PASSWORD
-// });
+const redis = new Redis({
+    host: 'redis-18317.c292.ap-southeast-1-1.ec2.cloud.redislabs.com',
+    port: '18317',
+    password: process.env.REDIS_PASSWORD
+});
 
 export default redis
 

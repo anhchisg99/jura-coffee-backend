@@ -23,6 +23,13 @@ export async function getInventoryPerProduct(productId) {
     console.log(error);
   }
 }
+export async function incrInventories(inventoryId,incr) {
+  try {
+    return await Inventory.findOneAndUpdate({_id:inventoryId},{$inc:{'quantity':incr}})
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 export async function getInventories() {
     try {

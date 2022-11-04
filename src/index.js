@@ -15,7 +15,7 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 InitiateMongoServer()
 
-const port = 3001
+const port = process.env.PORT || 3001
 
 app.use(cors())
 // app.use(express.static('./public'))

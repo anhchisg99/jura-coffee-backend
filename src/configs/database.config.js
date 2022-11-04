@@ -2,7 +2,7 @@ import dotenv from "dotenv"
 dotenv.config()
 export default {
     mongodb:{
-        host:process.env.MONGO_URI
+        host:process.env.MONGO_URL
     },
     mysql:{
         

@@ -25,7 +25,8 @@ export async function getInventoryPerProduct(productId) {
 }
 export async function incrInventories(inventoryId,incr) {
   try {
-    return await Inventory.findOneAndUpdate({_id:inventoryId},{$inc:{'quantity':incr}})
+    // let num_incr = Number(incr)
+    return await Inventory.findOneAndUpdate({_id:inventoryId},{ $inc: { "quantity" : incr } })
   } catch (error) {
     console.log(error);
   }

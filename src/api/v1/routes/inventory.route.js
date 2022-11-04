@@ -5,9 +5,9 @@ import {inventoryController} from '../controllers/index.js'
 
 inventoryRoute.get('/',inventoryController.getInventories)
 inventoryRoute.get('/:id',inventoryController.getInventory)
+inventoryRoute.put('/incr',inventoryController.incrInventories)
 inventoryRoute.delete('/:id',inventoryController.delInventory)
 inventoryRoute.post('/',inventoryController.postInventory)
-inventoryRoute.get('/incr',inventoryController.incrInventories)
 inventoryRoute.get('/per-product/:id',inventoryController.getInventoryPerProduct)
 // inventoryRoute.post('/',inventoryController.postProduct)
 

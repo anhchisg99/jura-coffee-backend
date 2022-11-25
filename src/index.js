@@ -25,6 +25,7 @@ const options = {
         },
         servers:[
             {url: "http://localhost:3001"},
+            {url: "https://jura-coffee.herokuapp.com"},
         ],
     },
     apis:["./src/api/v1/routes/*.js"]

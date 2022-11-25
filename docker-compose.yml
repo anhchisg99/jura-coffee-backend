@@ -1,0 +1,35 @@
+version: '3.1'
+
+# NETWORK
+networks:
+  my-network:
+    driver: bridge
+
+#VOLUMES
+volumes:
+  dir-site:
+    driver_opts:
+      o: bind
+      type: none
+      device: /Users/leduonganhchi/Desktop/Docker-volume/mongo
+  
+
+services:
+  mongo:
+    image: mongo
+    volumes:
+        - dir-site:/data/db
+
+    networks:
+      - my-network
+    ports:
+        - 27018:27017
+
+
+  redis-test:
+    image: redis:6.2-alpine
+    restart: always
+    ports:
+      - '6379:6379'
+    networks:
+      - my-network

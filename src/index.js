@@ -11,6 +11,27 @@ import { InitiateMongoServer } from './api/v1/datasources/index.js'
 import route from './api/v1/routes/index.js'
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
+import swaggerJSDoc from 'swagger-jsdoc'
+import swaggerUi from 'swagger-ui-express'
+
+//swagger
+const options = {
+    definition:{
+        openapi: "3.0.0",
+        info:{
+            title:"Library",
+            version:"1.0.0",
+            description:"con ga",
+        },
+        servers:[
+            {url: "http://localhost:3001"},
+        ],
+    },
+    apis:["./src/api/v1/routes/*.js"]
+}
+//swagger
+const specs = swaggerJSDoc(options)
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 InitiateMongoServer()

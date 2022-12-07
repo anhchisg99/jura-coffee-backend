@@ -8,7 +8,7 @@ import vars from '../../../configs/database.config.js'
 // production
 const redis = new Redis({
     host: vars.redis.host,
-    port: '18317',
+    port: '18800',
     password: vars.redis.password
 });
 

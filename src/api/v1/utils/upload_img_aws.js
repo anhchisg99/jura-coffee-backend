@@ -16,7 +16,7 @@ const s3 = new S3Client({
 const upload = multer({
     storage: multerS3({
         s3: s3,
-        bucket: "jura-coffee",
+        bucket: "jura-coffee-s3",
         contentType: multerS3.AUTO_CONTENT_TYPE,
 
         key: function (req, file, cb) {

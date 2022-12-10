@@ -52,7 +52,7 @@ productRoute.get('/category-product',productController.getCategoryProduct)
  *        description: get per-product
  *      '400':
  *        description: this is error !!!
- */
+ */ 
 productRoute.get('/:id',productController.getPerProduct)
 // productRoute.post('/',verifyAccessToken,authUser,authPage(['admin']),productController.createProduct)
 
